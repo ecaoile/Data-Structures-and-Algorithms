@@ -1,0 +1,11 @@
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\bin\Debug\netcoreapp2.0\whiteboard-challenge-01.deps.json
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\bin\Debug\netcoreapp2.0\whiteboard-challenge-01.runtimeconfig.json
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\bin\Debug\netcoreapp2.0\whiteboard-challenge-01.runtimeconfig.dev.json
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\bin\Debug\netcoreapp2.0\whiteboard-challenge-01.dll
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\bin\Debug\netcoreapp2.0\whiteboard-challenge-01.pdb
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\obj\Debug\netcoreapp2.0\whiteboard-challenge-01.csprojAssemblyReference.cache
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\obj\Debug\netcoreapp2.0\whiteboard-challenge-01.csproj.CoreCompileInputs.cache
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\obj\Debug\netcoreapp2.0\whiteboard-challenge-01.AssemblyInfoInputs.cache
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\obj\Debug\netcoreapp2.0\whiteboard-challenge-01.AssemblyInfo.cs
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\obj\Debug\netcoreapp2.0\whiteboard-challenge-01.dll
+C:\Users\Unfie\codefellows\401\Data-Structures-and-Algorithms\Challenges\whiteboard-challenge-01\whiteboard-challenge-01\obj\Debug\netcoreapp2.0\whiteboard-challenge-01.pdb
