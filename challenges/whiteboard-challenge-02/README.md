@@ -14,4 +14,4 @@ Create a function that takes in 2 parameters: a sorted array and the search key.
 Call the function in the main method and show proof that the function works.
 
 ## Solution
-![whiteboard 02 image](../../assets/array_binary_search_v2.jpg "Whiteboard Challenge 02 Solution")
+![whiteboard 02 image](../../assets/array_binary_search.jpg "Whiteboard Challenge 02 Solution")
