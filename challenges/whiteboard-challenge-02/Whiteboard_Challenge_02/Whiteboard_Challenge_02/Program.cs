@@ -33,14 +33,23 @@ namespace Whiteboard_Challenge_02
         public static int BinarySearch(int[] array, int key)
         {
             Console.WriteLine("\nRunning BinarySearch function...");
-            for (int i = 0; i < array.Length; i++)
+            int currentSecMin = 0, currentSecMax = array.Length - 1;
+            while (currentSecMin <= currentSecMax)
             {
-                if (array[i] == key)
+                int currentSecMid = (currentSecMin + currentSecMax) / 2;
+                if (key == array[currentSecMid])
                 {
-                    Console.WriteLine($"Match with key of {key} find at index {i}.");
-                    return i;
+                    Console.WriteLine($"Match with key of {key} find at index {currentSecMid}.");
+                    return currentSecMid;
                 }
+
+                if (key < array[currentSecMid])
+                    currentSecMax = currentSecMid - 1;
+
+                else
+                    currentSecMin = currentSecMid + 1;
             }
+
             Console.WriteLine($"No match with key {key} found! Returning -1");
             return -1;
         }
