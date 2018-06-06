@@ -8,4 +8,4 @@ Create a function that takes an integer array and returns a reversed array.
 Call the function in the main method and show proof that the function works.
 
 ## Solution
-![whiteboard image](https://github.com/ecaoile/Data-Structures-and-Algorithms/blob/1017fd729ca4d35fc0219f58628905f5114cd7c4/assets/array_reverse.jpg "Whiteboard Challenge 01 Solution")
+![whiteboard image](../../assets/array_reverse.jpg "Whiteboard Challenge 01 Solution")
