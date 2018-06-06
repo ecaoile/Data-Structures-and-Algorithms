@@ -6,6 +6,9 @@ namespace Whiteboard_Challenge_02
     {
         static void Main(string[] args)
         {
+            // intro message
+            Console.WriteLine("Wecome to the Whiteboard Challenge 02 Demo!");
+
             // initializing first array used for demonstration purposes
             int[] firstArr = new int[] { 1, 2, 3 };
             
@@ -22,8 +25,16 @@ namespace Whiteboard_Challenge_02
             // invoke function on second array with key - no match expected -> return -1
             BinarySearch(secondArr, 555);
 
+            // initializing a third array with 100 elements for stretch goal
+            int[] thirdArr = new int[100];
+            for (int i = 0; i < thirdArr.Length; i++)
+                thirdArr[i] = i + 1;
+
+            // invoke function on third array with key - expected match at index 42;
+            BinarySearch(thirdArr, 43);
+
             // closing message before user exits the program
-            Console.WriteLine("Thank you for playing! Press any button to quit.");
+            Console.WriteLine("\nThank you for playing! Press any button to quit.");
             Console.ReadLine();
         }
 
@@ -41,6 +52,7 @@ namespace Whiteboard_Challenge_02
                 // get a middle by adding the min and max and dividing by 2
                 int currentSecMid = (currentSecMin + currentSecMax) / 2;
                 Console.WriteLine($"Current middle value at index {currentSecMid}: {array[currentSecMid]}.");
+                
                 // handle an equal value found in the current section middle
                 if (key == array[currentSecMid])
                 {
