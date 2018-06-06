@@ -40,7 +40,7 @@ namespace Whiteboard_Challenge_02
             {
                 // get a middle by adding the min and max and dividing by 2
                 int currentSecMid = (currentSecMin + currentSecMax) / 2;
-                
+                Console.WriteLine($"Current middle value at index {currentSecMid}: {array[currentSecMid]}.");
                 // handle an equal value found in the current section middle
                 if (key == array[currentSecMid])
                 {
@@ -59,7 +59,7 @@ namespace Whiteboard_Challenge_02
             }
 
             // return  -1 if there is no match after traversing through the array
-            Console.WriteLine($"No match with key {key} found! Returning -1");
+            Console.WriteLine($"No match with key {key} found! Returning -1.");
             return -1;
         }
     }
