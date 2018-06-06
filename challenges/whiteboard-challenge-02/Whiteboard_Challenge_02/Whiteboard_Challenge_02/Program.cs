@@ -6,24 +6,30 @@ namespace Whiteboard_Challenge_02
     {
         static void Main(string[] args)
         {
+            // initializing first array used for demonstration purposes
             int[] firstArr = new int[] { 1, 2, 3 };
             
-            // expected match at index 1
+            // invoke function on first array with key - expected match at index 1
             BinarySearch(firstArr, 2);
-            // no match expected -> return -1
+            // invoke function on first array with different key - no match expected -> return -1
             BinarySearch(firstArr, 5);
 
+            // initializing second array used for demonstration purposes
             int[] secondArr = new int[] { 1, 2, 3, 4, 5, 6 };
 
-            // expected match at index 3
+            // invoke function on second array with key - expected match at index 3
             BinarySearch(secondArr, 4);
-            // no match expected -> return -1
+            // invoke function on second array with key - no match expected -> return -1
             BinarySearch(secondArr, 555);
 
+            // closing message before user exits the program
             Console.WriteLine("Thank you for playing! Press any button to quit.");
             Console.ReadLine();
         }
 
+        // BinarySearch function:
+        // input: an integer array and a key integer value
+        // output: the index at which the key value appears if present, else -1 for no match
         public static int BinarySearch(int[] array, int key)
         {
             Console.WriteLine("\nRunning BinarySearch function...");
