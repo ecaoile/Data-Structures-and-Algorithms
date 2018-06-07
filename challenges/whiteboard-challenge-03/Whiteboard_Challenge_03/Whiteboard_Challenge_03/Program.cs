@@ -35,7 +35,7 @@ namespace Whiteboard_Challenge_03
         /// gets the product of all adjacent elements in the array and finds the largest product
         /// </summary>
         /// <param name="datArray">a 2 dimensional integer array</param>
-        /// <returns>a product containing the largest value of adjacent elements</returns>
+        /// <returns>largest product of 2 adjuacent values</returns>
         public static int AdjacentProduct(int[,] datArray)
         {
             int largestValue = 0;
