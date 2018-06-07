@@ -16,4 +16,4 @@ Create a function that looks through the entire 2D array and performs calculatio
 Return the largest product and show proof that it works.
 
 ## Solution
-![whiteboard 03 image](../../assets/array_adajcent_product.jpg "Whiteboard Challenge 03 Solution")
+![whiteboard 03 image](../../assets/array_adjacent_product.jpg "Whiteboard Challenge 03 Solution")
