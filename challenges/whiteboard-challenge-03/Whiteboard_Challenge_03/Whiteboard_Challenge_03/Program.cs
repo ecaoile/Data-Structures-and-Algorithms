@@ -60,20 +60,20 @@ namespace Whiteboard_Challenge_03
                 for (int j = 0; j < datArray.GetLength(1); j++)
                 {
                     // check product of element and the item diagonal top left
-                    if (i - 1 >= 0 && j - 1 >= 0)
-                    {
-                        currentValue = datArray[i - 1, j - 1] * datArray[i, j];
-                        if (currentValue > largestValue)
-                            largestValue = currentValue;
-                    }
+                    //if (i - 1 >= 0 && j - 1 >= 0)
+                    //{
+                    //    currentValue = datArray[i - 1, j - 1] * datArray[i, j];
+                    //    if (currentValue > largestValue)
+                    //        largestValue = currentValue;
+                    //}
 
                     // check product of element and the item diagonal top right
-                    if (i - 1 >= 0 && j + 1 < datArray.GetLength(1))
-                    {
-                        currentValue = datArray[i - 1, j + 1] * datArray[i, j];
-                        if (currentValue > largestValue)
-                            largestValue = currentValue;
-                    }
+                    //if (i - 1 >= 0 && j + 1 < datArray.GetLength(1))
+                    //{
+                    //    currentValue = datArray[i - 1, j + 1] * datArray[i, j];
+                    //    if (currentValue > largestValue)
+                    //        largestValue = currentValue;
+                    //}
 
                     // check product of element and the item diagonal bottom right
                     if (i + 1 < datArray.GetLength(0) && j + 1 < datArray.GetLength(1))
