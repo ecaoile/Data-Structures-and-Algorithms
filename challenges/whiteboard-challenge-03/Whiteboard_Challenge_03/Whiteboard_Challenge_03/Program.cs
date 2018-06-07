@@ -91,13 +91,14 @@ namespace Whiteboard_Challenge_03
                             largestValue = currentValue;
                     }
 
-                    // check product of element and the item directly above
-                    if (i - 1 >= 0)
-                    {
-                        currentValue = datArray[i - 1, j] * datArray[i, j];
-                        if (currentValue > largestValue)
-                            largestValue = currentValue;
-                    }
+                    // note: it is not necessary to check directly above 
+                    // because the search starts from the top and checks below
+                    //if (i - 1 >= 0)
+                    //{
+                    //    currentValue = datArray[i - 1, j] * datArray[i, j];
+                    //    if (currentValue > largestValue)
+                    //        largestValue = currentValue;
+                    //}
 
                     // check product of element and the item directly below
                     if (i + 1 < datArray.GetLength(0))
@@ -107,13 +108,14 @@ namespace Whiteboard_Challenge_03
                             largestValue = currentValue;
                     }
 
-                    // check product of element and the item directly to the left
-                    if (j - 1 >= 0)
-                    {
-                        currentValue = datArray[i, j - 1] * datArray[i, j];
-                        if (currentValue > largestValue)
-                            largestValue = currentValue;
-                    }
+                    // note: it is not necessary to check directly to the left 
+                    // because the search starts from the left and checks to the right
+                    //if (j - 1 >= 0)
+                    //{
+                    //    currentValue = datArray[i, j - 1] * datArray[i, j];
+                    //    if (currentValue > largestValue)
+                    //        largestValue = currentValue;
+                    //}
 
                     // check product of element and the item directly to the right
                     if (j + 1 < datArray.GetLength(1))
@@ -124,7 +126,8 @@ namespace Whiteboard_Challenge_03
                     }
                 }
             }
-            Console.WriteLine($"The largest product is {largestValue}.\n");
+            Console.WriteLine($"The largest product is {largestValue}.");
+            Console.WriteLine("---\n");
             return largestValue;
         }
     }
