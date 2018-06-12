@@ -7,7 +7,7 @@ namespace LinkList
     /// <summary>
     /// consists of two properties types: a value and next
     /// </summary>
-    class Node
+    public class Node
     {
         public int Value { get; set; }
         // Every node is going to be a type of node

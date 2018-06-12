@@ -7,17 +7,21 @@ namespace LinkList
     /// <summary>
     /// Linked list class
     /// </summary>
-    class LinkList
+    public class SinglyLinkedList
     {
+        /// <summary>
+        /// the head of the linked list
+        /// </summary>
         public Node Head { get; set; }
 
         // We're going to be traversing through this list, so we need a current
         public Node Current { get; set; }
+        
         /// <summary>
         /// constructor for linked list that requires a node
         /// </summary>
         /// <param name="node">the node object to be put into the linked list</param>
-        public LinkList(Node node)
+        public SinglyLinkedList(Node node)
         {
             Head = node;
             Current = node;
@@ -33,7 +37,6 @@ namespace LinkList
             Head = node;
             Current = Head;
         }
-        // Find a node: O(n)
 
         /// <summary>
         /// prints out nodes
@@ -73,8 +76,68 @@ namespace LinkList
             // don't want to return a node if there is no node to give
             return Current.Value == value ? Current : null;
         }
-        // add before
-        // add after
-        // add last
+        
+        /// <summary>
+        /// method that adds a node before an existing node
+        /// </summary>
+        /// <param name="newNode">the new node to add</param>
+        /// <param name="existingNode">a dummy node with the same value as 
+        /// an existing node (not the actual node)</param>
+        public void AddBefore(Node newNode, Node existingNode)
+        {
+            Current = Head;
+            if (Head.Value == existingNode.Value)
+            {
+                Add(newNode);
+                return;
+            }
+            while (Current.Next != null)
+            {
+                if (Current.Next.Value == existingNode.Value)
+                {
+                    newNode.Next = Current.Next;
+                    Current.Next = newNode;
+                    return;
+                }
+            Current = Current.Next;
+            }
+        }
+
+        /// <summary>
+        /// method that adds a new node after an existing node
+        /// </summary>
+        /// <param name="newNode">the new node to add</param>
+        /// <param name="existingNode">a dummy node with the same value as 
+        /// an existing node (not the actual node)</param>
+        public void AddAfter(Node newNode, Node existingNode)
+        {
+            Current = Head;
+            while (Current.Next != null)
+            {
+                if (Current.Value == existingNode.Value)
+                {
+                    newNode.Next = Current.Next;
+                    Current.Next = newNode;
+                    return;
+                }
+                Current = Current.Next;
+            }
+        }
+
+        /// <summary>
+        /// method that adds a new node to the end of a linked list
+        /// </summary>
+        /// <param name="newNode"></param>
+        public void AddLast(Node newNode)
+        {
+            Current = Head;
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+
+            Current.Next = newNode;
+            return;  
+        }
     }
 }
