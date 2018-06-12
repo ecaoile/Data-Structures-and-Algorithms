@@ -21,6 +21,10 @@ Implement a Singly linked list. Your LinkList should meet the following criteria
     O(n) - .AddAfter(Node newNode, Node existingNode) - Adds a node after an existing node
     O(n) - .AddLast(Node node) - Adds a node to the end of a linked list. 
 
+## Implementation
+Each node is created as an object of the SinglyLinkedList class containing a node class object 
+with an integer value and a reference to the next node (also an object of node class).
+
 ## Visual
 ![Challenge: LinkList image](LinkList-SS.jpg "Challenge: LinkList")
 
