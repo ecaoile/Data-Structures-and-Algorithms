@@ -140,6 +140,12 @@ namespace ll_merge.Classes
             return;  
         }
 
+        /// <summary>
+        /// merges two linked list together
+        /// </summary>
+        /// <param name="ll1">the first link list</param>
+        /// <param name="ll2">the second linked list to merge into the first</param>
+        /// <returns>the first linked list as a merge of the original two</returns>
         public SinglyLinkedList Merge(SinglyLinkedList ll1, SinglyLinkedList ll2)
         {
             ll1.Current = ll1.Head;
