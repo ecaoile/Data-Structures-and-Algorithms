@@ -139,5 +139,36 @@ namespace ll_merge.Classes
             Current.Next = newNode;
             return;  
         }
+
+        public SinglyLinkedList Merge(SinglyLinkedList ll1, SinglyLinkedList ll2)
+        {
+            ll1.Current = ll1.Head;
+            ll2.Current = ll2.Head;
+            SinglyLinkedList ll3 = new SinglyLinkedList(new Node(ll1.Current.Value));
+            int counter = 1;
+            while (ll1.Current.Next != null && ll2.Current.Next != null)
+            {
+                if (ll1.Current.Next != null && counter % 2 == 0)
+                {
+                    ll1.Current = ll1.Current.Next;
+                }
+
+                if (ll2.Current.Next != null && counter % 2 != 0)
+                {
+                    ll1.AddAfter(new Node(ll2.Current.Value), new Node(ll1.Current.Value));
+                    ll1.Current = ll1.Current.Next;
+                    ll2.Current = ll2.Current.Next;
+                }
+                counter++;
+            }
+
+            while (ll2.Current != null)
+            {
+                ll1.AddLast(new Node(ll2.Current.Value));
+                ll2.Current = ll2.Current.Next;
+            }
+
+            return ll1;
+        }
     }
 }

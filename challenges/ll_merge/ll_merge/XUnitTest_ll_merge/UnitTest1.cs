@@ -19,7 +19,7 @@ namespace XUnitTest_ll_merge
             ll2.AddLast(new Node(9));
             ll2.AddLast(new Node(4));
 
-            SinglyLinkedList ll3 = Merge(ll1, ll2);
+            SinglyLinkedList ll3 = ll1.Merge(ll1, ll2);
 
             Assert.Equal(ll1.Head.Value, ll3.Head.Value);
             Assert.Equal(2, ll3.Find(2).Value);
@@ -41,7 +41,7 @@ namespace XUnitTest_ll_merge
             ll2.AddLast(new Node(4));
             ll2.AddLast(new Node(2));
 
-            SinglyLinkedList ll3 = Merge(ll1, ll2);
+            SinglyLinkedList ll3 = ll1.Merge(ll1, ll2);
 
             Assert.Equal(ll1.Head.Value, ll3.Head.Value);
             Assert.Equal(2, ll3.Find(2).Value);
