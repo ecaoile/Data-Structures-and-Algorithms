@@ -13,12 +13,18 @@ namespace Stack_and_Queue
             Stack datStack = new Stack(new Node(7));
             datStack.Print();
 
-            Console.WriteLine("\nNow let's add a few nodes!");
+            Console.WriteLine("\nNow let's push a few nodes!");
             datStack.Push(new Node(14));
             datStack.Print();
             datStack.Push(new Node(20));
             datStack.Print();
             datStack.Push(new Node(42));
+            datStack.Print();
+
+            Console.WriteLine("\nLet's pop off the last two values from our stack.");
+            datStack.Pop();
+            datStack.Print();
+            datStack.Pop();
             datStack.Print();
 
             Console.WriteLine("\nNext, we'll make a queue.");
@@ -34,12 +40,6 @@ namespace Stack_and_Queue
             datQueue.Print();
             datQueue.Enqueue(new Node(40));
             datQueue.Print();
-
-            Console.WriteLine("\nLet's pop off the last two values from our stack.");
-            datStack.Pop();
-            datStack.Print();
-            datStack.Pop();
-            datStack.Print();
 
             Console.WriteLine("\nFinally, let's dequeue the first two items from our queue.");
             datQueue.Dequeue();
