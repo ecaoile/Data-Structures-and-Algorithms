@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack_and_Queue", "Stack_and_Queue\Stack_and_Queue.csproj", "{0C91F500-D432-45AB-A48E-E7B24F1847B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack_and_Queue", "Stack_and_Queue\Stack_and_Queue.csproj", "{0C91F500-D432-45AB-A48E-E7B24F1847B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestStack_and_Queue", "XUnitTestStack_and_Queue\XUnitTestStack_and_Queue.csproj", "{E7797B29-AE38-4461-9FC7-82FD2C94538D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0C91F500-D432-45AB-A48E-E7B24F1847B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C91F500-D432-45AB-A48E-E7B24F1847B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C91F500-D432-45AB-A48E-E7B24F1847B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7797B29-AE38-4461-9FC7-82FD2C94538D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7797B29-AE38-4461-9FC7-82FD2C94538D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7797B29-AE38-4461-9FC7-82FD2C94538D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7797B29-AE38-4461-9FC7-82FD2C94538D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

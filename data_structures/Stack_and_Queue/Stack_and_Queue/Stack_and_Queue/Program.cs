@@ -34,7 +34,6 @@ namespace Stack_and_Queue
             datQueue.Print();
             datQueue.Enqueue(new Node(40));
             datQueue.Print();
-            //datQueue.Print();
 
             Console.WriteLine("\nLet's pop off the last two values from our stack.");
             datStack.Pop();

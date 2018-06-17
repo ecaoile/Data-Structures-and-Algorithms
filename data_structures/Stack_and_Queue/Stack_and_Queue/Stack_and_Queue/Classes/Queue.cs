@@ -23,11 +23,12 @@ namespace Stack_and_Queue.Classes
             Current = node;
         }
 
-        public void Enqueue(Node newNode)
+        public Node Enqueue(Node newNode)
         {
             Console.WriteLine($"Adding {newNode.Value} to the queue.");
-            newNode.Next = Rear;
+            Rear.Next = newNode;
             Rear = newNode;
+            return Rear;
         }
 
         public Node Dequeue()
@@ -45,20 +46,21 @@ namespace Stack_and_Queue.Classes
         }
 
         /// <summary>
-        /// prints out nodes in a stack
+        /// prints out nodes in a queue
         /// </summary>
         public void Print()
         {
-            // start from the rear to print everything up to the front
-            Current = Rear;
-            Console.Write("REAR ---> ");
+            // start from the front to print everything going back
+            Current = Front;
+
+            Console.Write("Front ---> ");
             while (Current.Next != null)
             {
                 Console.Write($"{Current.Value} ---> ");
                 Current = Current.Next;
             }
             // when we break out of the while loop, we'll be at the last node
-            Console.Write($"{Current.Value} ---> FRONT");
+            Console.Write($"{Current.Value} ---> Rear");
             Console.WriteLine();
         }
 

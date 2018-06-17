@@ -28,19 +28,21 @@ namespace Stack_and_Queue.Classes
         /// pushes a node onto the top of the stack
         /// </summary>
         /// <param name="newNode"></param>
-        public void Push(Node newNode)
+        public Node Push(Node newNode)
         {
             Console.WriteLine($"Adding {newNode.Value} to the stack.");
             newNode.Next = Top;
             Top = newNode;
+            return Top;
         }
+
         /// <summary>
         /// pops a node from the top of the stack
         /// </summary>
         /// <returns>the popped node</returns>
         public Node Pop()
         {
-            Console.WriteLine($"Popping off {Top}!");
+            Console.WriteLine($"Popping off {Top.Value} from the stack!");
             Node tmp = Top;
             Top = Top.Next;
             tmp.Next = null;
@@ -61,7 +63,7 @@ namespace Stack_and_Queue.Classes
         /// </summary>
         public void Print()
         {
-            // guarantees that we start at the beginning
+            // guarantees that we start at the top
             Current = Top;
             Console.Write("TOP ---> ");
             while (Current.Next != null)
