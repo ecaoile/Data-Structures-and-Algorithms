@@ -1,5 +1,5 @@
 # Data Structures and Algorithms
-Data structures folder for .NET 401
+Data structures and algorithms folder for Code Fellows C#/.NET 401 course
 
 ## Table of Contents
 1. [Whiteboard Challenge 01: Reverse an Array](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/ArrayReversal "Whiteboard Challenge 01: Reverse an Array")
