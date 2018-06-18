@@ -14,13 +14,12 @@ namespace Stack_and_Queue.Classes
         public Node Rear { get; set; }
 
         // We're going to be traversing through this list, so we need a current
-        public Node Current { get; set; }
+        //public Node Current { get; set; }
 
         public Queue(Node node)
         {
             Front = node;
             Rear = node;
-            Current = node;
         }
 
         public Node Enqueue(Node newNode)
@@ -51,7 +50,8 @@ namespace Stack_and_Queue.Classes
         public void Print()
         {
             // start from the front to print everything going back
-            Current = Front;
+
+            Node Current = Front;
 
             Console.Write("Front ---> ");
             while (Current.Next != null)

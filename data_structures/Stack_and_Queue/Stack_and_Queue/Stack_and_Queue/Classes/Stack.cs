@@ -11,9 +11,6 @@ namespace Stack_and_Queue.Classes
         /// </summary>
         public Node Top { get; set; }
 
-        // We're going to be traversing through this stack, so we need a current
-        public Node Current { get; set; }
-
         /// <summary>
         /// constructor for a stack that requires a node
         /// </summary>
@@ -21,7 +18,6 @@ namespace Stack_and_Queue.Classes
         public Stack(Node node)
         {
             Top = node;
-            Current = node;
         }
 
         /// <summary>
@@ -64,7 +60,7 @@ namespace Stack_and_Queue.Classes
         public void Print()
         {
             // guarantees that we start at the top
-            Current = Top;
+            Node Current = Top;
             Console.Write("TOP ---> ");
             while (Current.Next != null)
             {
