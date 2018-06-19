@@ -89,8 +89,9 @@ namespace Queue_with_Stacks.Classes
         /// <returns>the node that was "dequeued" from the stack</returns>
         public Node Dequeue()
         {
+            if (Top.Next == null)
+                return Pop();
             Stack tmpStack = new Stack(Pop());
-
             while (Top.Next != null)
                 tmpStack.Push(Pop());
 
