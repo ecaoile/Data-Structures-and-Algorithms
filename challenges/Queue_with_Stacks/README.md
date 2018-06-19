@@ -12,6 +12,7 @@ Example:
 
     Dequeue
     original stack: TOP --> [10] --> [15] --> [20] --> NULL
+    internal state: TOP --> [5] --> [10] --> [15] --> NULL
     output: [20]
 
 ## Challenge
