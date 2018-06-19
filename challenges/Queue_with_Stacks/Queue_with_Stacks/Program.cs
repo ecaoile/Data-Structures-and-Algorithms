@@ -21,13 +21,15 @@ namespace Queue_with_Stacks
             stack1.Push(new Node(10));
             stack1.Print();
 
+            Stack stack2 = new Stack(new Node(0));
+            Queue fakeQueue = new Queue(stack1, stack2);
             Console.WriteLine("\nNow let's 'enqueue' another value");
-            stack1.Enqueue(5);
-            stack1.Print();
+            fakeQueue.Enqueue(5);
+            fakeQueue.Print();
 
             Console.WriteLine("\nNow let's 'dequeue' a value");
-            stack1.Dequeue();
-            stack1.Print();
+            fakeQueue.Dequeue();
+            fakeQueue.Print();
         }
     }
 }

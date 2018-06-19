@@ -7,12 +7,12 @@ namespace Queue_with_Stacks.Classes
     public class Stack
     {
         /// <summary>
-        /// the top of a stack
+        /// the top of our "Stack"
         /// </summary>
         public Node Top { get; set; }
 
         /// <summary>
-        /// constructor for a stack that requires a node
+        /// constructor for our "Stack" that requires a node
         /// </summary>
         /// <param name="node">the node object to be put into the stack</param>
         public Stack(Node node)
@@ -70,37 +70,6 @@ namespace Queue_with_Stacks.Classes
             // when we break out of the while loop, we'll be at the last node
             Console.Write($"{Current.Value} ---> NULL");
             Console.WriteLine();
-        }
-
-        /// <summary>
-        /// Emulates the "enqueue" method but for a stack
-        /// </summary>
-        /// <param name="value">the value of the node to "enqueue"</param>
-        /// <returns>The node that was "enqueued"</returns>
-        public Node Enqueue(int value)
-        {
-            Push(new Node(value));
-            return Top;
-        }
-
-        /// <summary>
-        /// emulates the "dequeue" method but for a stack
-        /// </summary>
-        /// <returns>the node that was "dequeued" from the stack</returns>
-        public Node Dequeue()
-        {
-            if (Top.Next == null)
-                return Pop();
-            Stack tmpStack = new Stack(Pop());
-            while (Top.Next != null)
-                tmpStack.Push(Pop());
-
-            Node tmpNode = Pop();
-
-            while (tmpStack.Top != null)
-                Push(tmpStack.Pop());
-
-            return tmpNode;
         }
     }
 }
