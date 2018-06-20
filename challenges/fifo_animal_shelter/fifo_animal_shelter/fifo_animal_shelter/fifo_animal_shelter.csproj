@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Lab_06_Interfaces">
+      <HintPath>..\..\..\..\..\Lab-06-Interfaces\Lab_06_Interfaces\Lab_06_Interfaces\bin\Debug\netcoreapp2.0\Lab_06_Interfaces.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
