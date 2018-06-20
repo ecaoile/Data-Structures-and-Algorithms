@@ -86,6 +86,19 @@ namespace fifo_animal_shelter.Classes
                 return tmp;
             }
         }
+
+        /// <summary>
+        /// regular dequeue if there is no preference (stretch goal)
+        /// </summary>
+        /// <returns>the dequeued animal</returns>
+        public Animal Dequeue()
+        {
+            Animal tmp = Front;
+            Front = Front.Next;
+            tmp.Next = null;
+            return tmp;
+        }
+
         public void Print()
         {
             // start from the front to print everything going back
