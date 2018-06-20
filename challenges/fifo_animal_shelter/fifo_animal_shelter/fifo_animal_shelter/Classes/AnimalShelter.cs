@@ -42,9 +42,8 @@ namespace fifo_animal_shelter.Classes
             if ((fPref != "cat" && fPref != "dog") || frontType == fPref)
             {
                 Console.WriteLine($"Dequeueing a {Front.GetType().Name.ToLower()}");
-                return MiniDQ();
+                return Dequeue();
             }
-
 
             Animal oldFront = Front;
 
@@ -58,7 +57,7 @@ namespace fifo_animal_shelter.Classes
 
             while (frontType != fPref)
             {
-                Enqueue(MiniDQ());
+                Enqueue(Dequeue());
                 if (Front == oldFront)
                 {
                     Console.WriteLine("That animal cannot be found here.");
@@ -68,23 +67,14 @@ namespace fifo_animal_shelter.Classes
             }
 
             Console.WriteLine($"Dequeueing a {frontType}");
-            Animal tmp1 = MiniDQ();
-            
+            Animal tmp1 = Dequeue();
+
+            // loop to ensure the shelter is in proper order before returning
+            // the desired cat or dog
             while (Front != oldFront)
-            {
-                Enqueue(MiniDQ());
-            }
+                Enqueue(Dequeue());
 
             return tmp1;
-
-            // The regular dequeue method that we're defining for modularity
-            Animal MiniDQ()
-            {
-                Animal tmp = Front;
-                Front = Front.Next;
-                tmp.Next = null;
-                return tmp;
-            }
         }
 
         /// <summary>
