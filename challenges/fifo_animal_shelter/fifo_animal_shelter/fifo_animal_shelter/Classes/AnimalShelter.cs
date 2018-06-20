@@ -45,17 +45,25 @@ namespace fifo_animal_shelter.Classes
                 return MiniDQ();
             }
 
+
             Animal oldFront = Front;
-            Animal oldRear = Rear;
+
+            // handles a single animal and no match
+            if (fPref != frontType && Front == Rear)
+            {
+                Console.WriteLine($"There's only one animal in the shelter," +
+                    $" and it's not a {fPref}.");
+                return null;
+            }
+
             while (frontType != fPref)
             {
-                if (Front == oldFront && fPref != frontType && Front == Rear)
+                Enqueue(MiniDQ());
+                if (Front == oldFront)
                 {
                     Console.WriteLine("That animal cannot be found here.");
                     return null;
                 }
-                
-                Enqueue(MiniDQ());
                 frontType = Front.GetType().Name.ToLower();
             }
 

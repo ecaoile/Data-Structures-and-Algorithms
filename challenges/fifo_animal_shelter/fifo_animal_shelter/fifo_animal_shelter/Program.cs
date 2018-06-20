@@ -9,7 +9,7 @@ namespace fifo_animal_shelter
         {
             Console.WriteLine("Hello World!");
             FIFOAnimalShelter();
-            Console.WriteLine("Thank you for watching! Press any key to quit.");
+            Console.WriteLine("\nThank you for watching! Press any key to quit.");
             Console.ReadKey();
         }
 
