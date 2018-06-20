@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fifo_animal_shelter", "fifo_animal_shelter\fifo_animal_shelter.csproj", "{133F8271-0CE5-4FE0-A3D4-E7965232EB3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestFifo_Animal_Shelter", "XUnitTestFifo_Animal_Shelter\XUnitTestFifo_Animal_Shelter.csproj", "{BD284596-781E-47E0-9090-7E0F255605BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestFifo_Animal_Shelter", "XUnitTestFifo_Animal_Shelter\XUnitTestFifo_Animal_Shelter.csproj", "{BD284596-781E-47E0-9090-7E0F255605BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C74DA1A-DCDD-4EBF-98CD-1F181193D102}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
