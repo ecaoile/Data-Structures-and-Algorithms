@@ -6,7 +6,6 @@ namespace fifo_animal_shelter.Classes
 {
     public class Cat : Animal
     {
-        public string Name { get; set; }
         public Cat()
         {
             Name = "default cat";

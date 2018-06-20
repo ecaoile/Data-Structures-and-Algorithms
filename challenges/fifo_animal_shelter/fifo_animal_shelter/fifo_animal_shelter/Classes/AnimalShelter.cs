@@ -16,11 +16,6 @@ namespace fifo_animal_shelter.Classes
             Rear = datAnimal;
         }
 
-        //public AnimalShelter(string name)
-        //{
-        //    Name = name;
-        //}
-
         public bool Enqueue(Animal datAnimal)
         {
             if (!(datAnimal is Dog) && !(datAnimal is Cat))
@@ -42,22 +37,29 @@ namespace fifo_animal_shelter.Classes
         public Animal Dequeue(string pref)
         {
             string fPref = pref.ToLower();
-            string wantedType = Front.GetType().Name.ToLower();
+            string frontType = Front.GetType().Name.ToLower();
 
-            if ((fPref != "cat" && pref != "dog") || wantedType == fPref)
+            if ((fPref != "cat" && fPref != "dog") || frontType == fPref)
             {
                 Console.WriteLine($"Dequeueing a {Front.GetType().Name.ToLower()}");
                 return MiniDQ();
             }
 
             Animal oldFront = Front;
-            while (wantedType != fPref)
+            Animal oldRear = Rear;
+            while (frontType != fPref)
             {
+                if (Front == oldFront && fPref != frontType && Front == Rear)
+                {
+                    Console.WriteLine("That animal cannot be found here.");
+                    return null;
+                }
+                
                 Enqueue(MiniDQ());
-                wantedType = Front.GetType().Name.ToLower();
+                frontType = Front.GetType().Name.ToLower();
             }
 
-            Console.WriteLine($"Dequeueing a {Front.GetType().Name.ToLower()}");
+            Console.WriteLine($"Dequeueing a {frontType}");
             Animal tmp1 = MiniDQ();
             
             while (Front != oldFront)
@@ -79,17 +81,16 @@ namespace fifo_animal_shelter.Classes
         public void Print()
         {
             // start from the front to print everything going back
-
             Animal Current = Front;
 
             Console.Write("Front ---> ");
             while (Current != null)
             {
                 if (Current is Dog)
-                    Console.Write($"Dog ---> ");
+                    Console.Write($"{Current.Name} ---> ");
 
                 if (Current is Cat)
-                    Console.Write("Cat ---> ");
+                    Console.Write($"{Current.Name} ---> ");
 
                 Current = Current.Next;
             }

@@ -15,13 +15,12 @@ namespace fifo_animal_shelter
 
         public static void FIFOAnimalShelter()
         {
-            Cat testCat1 = new Cat("Meowth (Cat)");
-            Cat testCat2 = new Cat("Meemers (Cat)");
-            Cat testCat3 = new Cat();
-            Cat testCat4 = new Cat();
-            Dog testDog1 = new Dog("Snoopy (Dog)");
-            Dog testDog2 = new Dog("Spudgy (Dog)");
-            Dog testDog3 = new Dog();
+            Cat testCat1 = new Cat("Cat 1");
+            Cat testCat2 = new Cat("Cat 2");
+            Cat testCat3 = new Cat("Cat 3");
+            Cat testCat4 = new Cat("Cat 4");
+            Dog testDog1 = new Dog("Dog 1");
+            Dog testDog2 = new Dog("Dog 2");
 
             AnimalShelter testShelter = new AnimalShelter(testCat1);
 
@@ -45,15 +44,20 @@ namespace fifo_animal_shelter
             testShelter.Print();
 
             Console.WriteLine("\nLet's dequeue a dog.");
-            testShelter.Dequeue("dog");
+            testShelter.Dequeue("DOG");
             testShelter.Print();
 
             Console.WriteLine("\nWe have 3 cats in the front! Let's dequeue 2 of them.");
-            testShelter.Dequeue("cat");
-            testShelter.Dequeue("cat");
+            testShelter.Dequeue("CaT");
+            testShelter.Dequeue("cAt");
             testShelter.Print();
 
-        }
+            Console.WriteLine("\nThere's only one dog left, but let's try to get rid of two dogs.");
+            testShelter.Dequeue("DOG");
+            testShelter.Print();
 
+            testShelter.Dequeue("DOG");
+            testShelter.Print();
+        }
     }
 }
