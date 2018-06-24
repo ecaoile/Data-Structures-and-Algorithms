@@ -148,33 +148,24 @@ namespace BT_and_BST.Classes
         /// <returns>the node if it was found</returns>
         public Node Search(Node root, int value)
         {
-            //if (root != null)
+            //if (root == null)
             //{
-            //    if (root.Value == value)
-            //    {
-            //        Console.WriteLine($"Found a match with the value {value}!");
-            //        return root;
-            //    }
-
-            //    else
-            //    {
-            //        Node foundNode = Search(root.LeftChild, value);
-            //        //if (root.LeftChild != null)
-            //        //{
-            //        //    Search(root.LeftChild, value);
-            //        //}
-
-            //        if (foundNode != null)
-            //            return foundNode;
-            //        else
-            //            Search(root.RightChild, value);
-
-            //        //return foundNode;
-            //    }
-            //}
-
             //    Console.WriteLine("Sorry, but we could not find a match!");
             //    return null;
+            //}
+
+            //if (root.Value == value)
+            //{
+            //    Console.WriteLine($"Found a match with the value {value}!");
+            //    return root;
+            //}
+
+            //if (Search(root.LeftChild, value) != null)
+            //    return Search(root.LeftChild, value);
+            //else
+            //    return Search(root.RightChild, value);
+
+
             if (root == null)
             {
                 Console.WriteLine("Sorry, but we could not find a match!");
