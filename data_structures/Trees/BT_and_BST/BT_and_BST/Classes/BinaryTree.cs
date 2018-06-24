@@ -148,6 +148,7 @@ namespace BT_and_BST.Classes
         /// <returns>the node if it was found</returns>
         public Node Search(Node root, int value)
         {
+            // this is my original code before finding a more optimal solution
             //if (root == null)
             //{
             //    Console.WriteLine("Sorry, but we could not find a match!");

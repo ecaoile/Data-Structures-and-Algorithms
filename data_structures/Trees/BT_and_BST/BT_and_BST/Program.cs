@@ -31,8 +31,8 @@ namespace BT_and_BST
             datBinaryTree.BreadthFirst(datRoot);
 
             Console.WriteLine("\nLet's look for existing nodes.");
-            Console.WriteLine(datBinaryTree.Search(datRoot, 10).Value);
-            Console.WriteLine(datBinaryTree.Search(datRoot, 7).Value);
+            datBinaryTree.Search(datRoot, 10);
+            datBinaryTree.Search(datRoot, 7);
 
             Console.WriteLine("\nNext, let's make a binary search tree.");
             Node datBSTRoot = new Node(100);
@@ -54,6 +54,5 @@ namespace BT_and_BST
             Console.WriteLine("\nThank you for watching! Press any button to exit.");
             Console.ReadKey();
         }
-
     }
 }
