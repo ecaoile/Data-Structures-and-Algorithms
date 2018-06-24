@@ -7,7 +7,8 @@ namespace BT_and_BST
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to my binary tree and binary search" +
+                "tree implementation.\n");
             Node datRoot = new Node(3);
             BinaryTree datBinaryTree = new BinaryTree(datRoot);
 
@@ -18,15 +19,19 @@ namespace BT_and_BST
             datBinaryTree.Add(datRoot, 13);
             datBinaryTree.Add(datRoot, 15);
 
-            Console.WriteLine("\nInOrder traversal:");
-            datBinaryTree.InOrder(datRoot);
-
+            // should display 3, 5, 10, 13, 7, 5
             Console.WriteLine("\nPreOrder traversal:");
             datBinaryTree.PreOrder(datRoot);
 
+            // should display 10, 5, 13, 3, 15, 7
+            Console.WriteLine("\nInOrder traversal:");
+            datBinaryTree.InOrder(datRoot);
+
+            // should display 10, 13, 5, 15, 7, 3
             Console.WriteLine("\nPostOrder traversal:");
             datBinaryTree.PostOrder(datRoot);
 
+            // should display 3, 5, 7, 10, 13, 15
             Console.WriteLine("\nBreadthFirst traversal:");
             datBinaryTree.BreadthFirst(datRoot);
 
@@ -46,6 +51,18 @@ namespace BT_and_BST
             datBST.Add(datBSTRoot, 342);
             datBST.Add(datBSTRoot, 90);
             datBST.Add(datBSTRoot, 60);
+
+            // should display 150, 50, 25, 75, 60, 90, 200, 150, 300, 342
+            Console.WriteLine("\nPreorder traversal:");
+            datBST.PreOrder(datBSTRoot);
+
+            // should display 25, 50, 60, 75, 90, 100, 150, 200, 300, 342
+            Console.WriteLine("\nInorder traversal:");
+            datBST.InOrder(datBSTRoot);
+
+            // should display 25, 60, 90, 75, 50, 150, 342, 300, 200, 100
+            Console.WriteLine("\nPostorder traversal:");
+            datBST.PostOrder(datBSTRoot);
 
             Console.WriteLine("\nLet's look for existing nodes.");
             datBST.Search(datBSTRoot, 25);

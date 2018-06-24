@@ -9,9 +9,7 @@ namespace BT_and_BST.Classes
     /// </summary>
     public class Node
     {
-        public int Value { get; set; }
-
-        public Node Next { get; set; }
+        public double Value { get; set; }
 
         public Node LeftChild { get; set; }
 
@@ -21,7 +19,7 @@ namespace BT_and_BST.Classes
         /// constructor for node, needs to have an int to be created
         /// </summary>
         /// <param name="value">int value for the node to create</param>
-        public Node(int value)
+        public Node(double value)
         {
             Value = value;
         }

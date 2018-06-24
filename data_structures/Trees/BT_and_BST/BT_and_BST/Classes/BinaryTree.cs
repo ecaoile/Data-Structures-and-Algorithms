@@ -116,14 +116,14 @@ namespace BT_and_BST.Classes
                 if (front.LeftChild == null)
                 {
                     front.LeftChild = datNode;
-                    Console.WriteLine($"Added to the left of {front.Value}.");
+                    Console.WriteLine($"Added {value} to the left of {front.Value}.");
                     return true;
                 }
 
                 if (front.RightChild == null)
                 {
                     front.RightChild = datNode;
-                    Console.WriteLine($"Added to the right of {front.Value}");
+                    Console.WriteLine($"Added {value} to the right of {front.Value}");
                     return true;
                 }
 
@@ -148,7 +148,7 @@ namespace BT_and_BST.Classes
         /// <returns>the node if it was found</returns>
         public Node Search(Node root, int value)
         {
-            // this is my original code before finding a more optimal solution
+            //this was my original code before finding a more optimal solution
             //if (root == null)
             //{
             //    Console.WriteLine("Sorry, but we could not find a match!");
@@ -165,7 +165,6 @@ namespace BT_and_BST.Classes
             //    return Search(root.LeftChild, value);
             //else
             //    return Search(root.RightChild, value);
-
 
             if (root == null)
             {
