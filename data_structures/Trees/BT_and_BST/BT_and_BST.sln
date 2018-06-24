@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BT_and_BST", "BT_and_BST\BT_and_BST.csproj", "{934206ED-A177-4907-8A3B-A311746D752B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestBT_and_BST", "XUnitTestBT_and_BST\XUnitTestBT_and_BST.csproj", "{A66605D5-1BB9-4DC8-BC59-8D0E5E91149F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestBT_and_BST", "XUnitTestBT_and_BST\XUnitTestBT_and_BST.csproj", "{A66605D5-1BB9-4DC8-BC59-8D0E5E91149F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85EC372C-C9EB-4B40-8C70-1DE9F37EABC4}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
