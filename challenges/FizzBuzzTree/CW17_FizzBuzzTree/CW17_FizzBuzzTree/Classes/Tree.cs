@@ -124,14 +124,17 @@ namespace CW17_FizzBuzzTree.Classes
                 {
                     root.Value = "fizzbuzz";
                 }
+
                 else if (rootNum % 3 == 0)
                 {
                     root.Value = "fizz";
                 }
+
                 else if (rootNum % 5 == 0)
                 {
                     root.Value = "buzz";
                 }
+
                 else
                 {
                     Console.WriteLine($"{root.Value} cannot be divided by 3 or 5.");

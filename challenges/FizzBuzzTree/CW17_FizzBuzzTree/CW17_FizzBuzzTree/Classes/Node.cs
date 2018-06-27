@@ -9,6 +9,7 @@ namespace CW17_FizzBuzzTree.Classes
     /// </summary>
     public class Node
     {
+        // we're holding string values in these particular nodes just for this whiteboard challenge
         public string Value { get; set; }
 
         public Node LeftChild { get; set; }
@@ -16,9 +17,9 @@ namespace CW17_FizzBuzzTree.Classes
         public Node RightChild { get; set; }
 
         /// <summary>
-        /// constructor for node, needs to have an int to be created
+        /// constructor for node, needs to have a string root to be created
         /// </summary>
-        /// <param name="value">int value for the node to create</param>
+        /// <param name="value">string value for the node to create</param>
         public Node(string value)
         {
             Value = value;
