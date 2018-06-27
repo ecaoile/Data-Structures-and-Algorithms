@@ -1,4 +1,4 @@
-# Whiteboard Challenge 17: Multi-bracket Validation
+# Whiteboard Challenge 17: Fizz Buzz Tree
 This program demonstrates "fizzbuzz" being performed on a tree. 
 Here are the rules of fizzbuzz:
 - a value that is evenly divisible by 3 is replaced with "fizz"
@@ -9,8 +9,8 @@ This program displays the original tree as well as
 the state of the tree after the FizzBuzzTree method is invoked on it.
 
 ## Challenge
-Conduct ìFizzBuzzî on a tree while traversing through it. 
-Change the values of each of the nodes dependent on the current nodeís value.
+Conduct ‚ÄúFizzBuzz‚Äù on a tree while traversing through it. 
+Change the values of each of the nodes dependent on the current node‚Äôs value.
 
 ## Solution
 ![whiteboard 17 image](../../assets/FizzBuzzTree.jpg "Whiteboard Challenge 17 Solution")
