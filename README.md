@@ -13,3 +13,4 @@ Data structures and algorithms folder for Code Fellows C#/.NET 401 course
 9. [Whiteboard Challenge 12: First-in, First out Animal Shelter](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/fifo_animal_shelter "Whiteboard Challenge 12: First-in, First out Animal Shelter")
 10. [Challenge: Implement a binary tree and search tree](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/data_structures/Trees/BinaryTree_and_BinarySearchTree "Challenge: Implement a binary tree and search tree")
 11. [Whiteboard Challenge 17: Fizz Buzz Tree](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/FizzBuzzTree "Whiteboard Challenge 17: Fizz Buzz Tree")
+12. [Whiteboard Challenge 18: Find the Maximum Value in a Binary Tree](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/find-maximum-value-binary-tree "Whiteboard Challenge 18: Find the Maximum Value in a Binary Tree")
