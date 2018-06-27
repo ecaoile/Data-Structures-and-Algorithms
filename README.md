@@ -12,3 +12,4 @@ Data structures and algorithms folder for Code Fellows C#/.NET 401 course
 8. [Whiteboard Challenge 11: Implement a queue with 2 stacks](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/Queue_with_Stacks "Whiteboard Challenge 11: Implement a queue with 2 stacks")
 9. [Whiteboard Challenge 12: First-in, First out Animal Shelter](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/fifo_animal_shelter "Whiteboard Challenge 12: First-in, First out Animal Shelter")
 10. [Challenge: Implement a binary tree and search tree](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/data_structures/Trees/BinaryTree_and_BinarySearchTree "Challenge: Implement a binary tree and search tree")
+11. [Whiteboard Challenge 17: Fizz Buzz Tree](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/FizzBuzzTree "Whiteboard Challenge 17: Fizz Buzz Tree")
