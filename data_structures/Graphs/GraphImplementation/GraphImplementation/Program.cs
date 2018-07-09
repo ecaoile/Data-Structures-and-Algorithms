@@ -59,6 +59,7 @@ namespace GraphImplementation
             Console.WriteLine(datGraph.AddEdge(nodeB, nodeE).Value);
             Console.WriteLine();
 
+            // Note: GetNodes() calls BreadthFirst()
             List<Node> graphList = datGraph.GetNodes(nodeA);
 
             Console.WriteLine("Press any key to continue.");
