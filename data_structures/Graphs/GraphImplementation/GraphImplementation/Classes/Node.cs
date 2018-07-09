@@ -12,8 +12,6 @@ namespace GraphImplementation.Classes
 
         public bool Visited { get; set; }
 
-        //public Node<GetEnumerator> Children { get; set; }
-
         public Node(string value)
         {
             Value = value;
