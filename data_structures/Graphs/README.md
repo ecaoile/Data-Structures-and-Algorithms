@@ -6,7 +6,7 @@ Graphs are a collection of a linked lists or arrays of nodes/vertices. Traversal
 going through a given node's list of children, the children of those children, and so on...
 
 ## Directions
-implement your own Graph, as an adjacency list that implements the following:
+Implement your own Graph, as an adjacency list that implements the following:
 
     AddEdge() - Adds a new vertice to the graph
     GetNodes() - returns all of the nodes in the graph as a collection
@@ -19,8 +19,7 @@ For this implementation, the graph does not require a root node to be initialize
 Each node/vertice contains a children, a value, and a visited boolean. 
 
 ## Visual
-![Graph Image](Graph-SS1.jpg "Stack")
-
+![Graph Image](Graph-SS1.jpg "Graph")
 
 ## Graph Uses
 - GPS and mapping
