@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphImplementation", "GraphImplementation\GraphImplementation.csproj", "{93671F0E-BF89-4BE0-85DD-6789FEFB0412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestGraph", "XUnitTestGraph\XUnitTestGraph.csproj", "{3F4B5F35-ADB8-4BAE-818A-A0EC23A63069}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestGraph", "XUnitTestGraph\XUnitTestGraph.csproj", "{3F4B5F35-ADB8-4BAE-818A-A0EC23A63069}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B02FD2C0-C00F-4D20-8042-F16A54E362B7}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

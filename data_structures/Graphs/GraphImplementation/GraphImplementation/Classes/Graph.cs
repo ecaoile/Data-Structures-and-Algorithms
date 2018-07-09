@@ -104,31 +104,39 @@ namespace GraphImplementation.Classes
         /// </summary>
         /// <param name="root">root node to start at</param>
         /// <returns>list of nodes from the graph</returns>
-        public List<Node> DepthFirst(Node root)
-        {
-            List<Node> order = new List<Node>();
-            Stack<Node> depth = new Stack<Node>();
-            depth.Push(root);
+        //public List<Node> DepthFirst(Node root)
+        //{
+        //    List<Node> order = new List<Node>();
+        //    Stack<Node> depth = new Stack<Node>();
+        //    depth.Push(root);
 
-            while (depth.TryPeek(out root))
-            {
-                Node top = depth.Peek();
+        //    while (depth.TryPeek(out root))
+        //    {
+        //        Node top = depth.Peek();
 
-                foreach (Node child in top.Children)
-                {
-                    if (!child.Visited)
-                    {
-                        child.Visited = true;
-                        depth.Push(child);
-                    }
-                    else
-                    {
-                        order.Add(top);
-                        depth.Pop();
-                    }
-                }
-            }
-            return order;
-        }
+        //        foreach (Node child in top.Children)
+        //        {
+        //            if (!child.Visited)
+        //            {
+        //                child.Visited = true;
+        //                depth.Push(child);
+        //            }
+        //            else
+        //            {
+        //                order.Add(top);
+        //                depth.Pop();
+        //            }
+        //        }
+        //    }
+
+        //    order = order.Distinct().ToList();
+
+        //    foreach (var item in order)
+        //    {
+        //        item.Visited = false;
+        //    }
+
+        //    return order;
+        //}
     }
 }

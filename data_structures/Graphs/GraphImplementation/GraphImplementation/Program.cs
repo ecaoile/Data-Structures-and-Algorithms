@@ -61,7 +61,7 @@ namespace GraphImplementation
 
             List<Node> graphList = datGraph.GetNodes(nodeA);
 
-            Console.WriteLine("\nPress any key to continue.");
+            Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
 
             Console.WriteLine("\nLet's look at all of the nodes in the graph!");
@@ -82,7 +82,7 @@ namespace GraphImplementation
 
             Console.WriteLine("\nLet's get the number of nodes in our graph:");
             Console.WriteLine(datGraph.Size(nodeA));
-            
+
             Console.WriteLine("\nThank you for watching! Press any key to exit.");
             Console.ReadKey();
         }
