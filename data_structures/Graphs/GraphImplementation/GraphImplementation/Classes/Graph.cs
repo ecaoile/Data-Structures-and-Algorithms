@@ -72,6 +72,8 @@ namespace GraphImplementation.Classes
         {
             List<Node> order = new List<Node>();
             Queue<Node> breadth = new Queue<Node>();
+
+            root.Visited = true;
             breadth.Enqueue(root);
 
             while (breadth.TryPeek(out root))
@@ -89,7 +91,7 @@ namespace GraphImplementation.Classes
                 }
             }
 
-            order = order.Distinct().ToList();
+            //order = order.Distinct().ToList();
 
             foreach (var item in order)
             {
@@ -104,39 +106,57 @@ namespace GraphImplementation.Classes
         /// </summary>
         /// <param name="root">root node to start at</param>
         /// <returns>list of nodes from the graph</returns>
-        //public List<Node> DepthFirst(Node root)
-        //{
-        //    List<Node> order = new List<Node>();
-        //    Stack<Node> depth = new Stack<Node>();
-        //    depth.Push(root);
+        public List<Node> DepthFirst(Node root)
+        {
+            List<Node> order = new List<Node>();
+            Stack<Node> depth = new Stack<Node>();
+            depth.Push(root);
 
-        //    while (depth.TryPeek(out root))
-        //    {
-        //        Node top = depth.Peek();
+            //while (depth.TryPeek(out root))
+            //{
+            //    Node top = depth.Peek();
 
-        //        foreach (Node child in top.Children)
-        //        {
-        //            if (!child.Visited)
-        //            {
-        //                child.Visited = true;
-        //                depth.Push(child);
-        //            }
-        //            else
-        //            {
-        //                order.Add(top);
-        //                depth.Pop();
-        //            }
-        //        }
-        //    }
+            //    foreach (Node child in top.Children)
+            //    {
+            //        if (!child.Visited)
+            //        {
+            //            child.Visited = true;
+            //            depth.Push(child);
+            //        }
+            //        else
+            //        {
+            //            order.Add(top);
+            //            depth.Pop();
+            //        }
+            //    }
 
-        //    order = order.Distinct().ToList();
+            //}
 
-        //    foreach (var item in order)
-        //    {
-        //        item.Visited = false;
-        //    }
+            List<Node> visited = new List<Node>();
 
-        //    return order;
-        //}
+            while (depth.Count != 0)
+            {
+                var current = depth.Pop();
+                order.Add(current);
+                visited.Add(current);
+
+                var neighbors = GetNeighbors(current).Where(node => !visited.Contains(node));
+
+                foreach (var item in neighbors.Reverse())
+                {
+                    depth.Push(item);
+                    order.Add(item);
+                }
+            }
+
+            order = order.Distinct().ToList();
+
+            foreach (var item in order)
+            {
+                item.Visited = false;
+            }
+
+            return order;
+        }
     }
 }
