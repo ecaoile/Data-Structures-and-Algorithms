@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace GraphImplementation.Classes
@@ -14,9 +15,9 @@ namespace GraphImplementation.Classes
         /// <summary>
         /// 1. Adds a new vertice to the graph
         /// </summary>
-        /// <param name="parent"></param>
-        /// <param name="child"></param>
-        /// <returns></returns>
+        /// <param name="parent">the parent node to attach the child to</param>
+        /// <param name="child">the child node to add to the graph</param>
+        /// <returns>the added child</returns>
         public Node AddEdge(Node parent, Node child)
         {
             parent.Children.Add(child);
@@ -36,9 +37,8 @@ namespace GraphImplementation.Classes
         /// <summary>
         /// 3. returns a collection 
         /// </summary>
-        /// <param name="root"></param>
-        /// <param name="target"></param>
-        /// <returns></returns>
+        /// <param name="root">root node to get neighbors from</param>
+        /// <returns>list of neighbor nodes to root</returns>
         public List<Node> GetNeighbors(Node root)
         {
             var allNodes = GetNodes(root);
@@ -49,7 +49,7 @@ namespace GraphImplementation.Classes
             // adding the "parents"
             foreach (var item in allNodes)
             {
-                if (item.Children.Contains(root))
+                if (item.Children.Contains(root) && !demNeighbors.Contains(item))
                 {
                     demNeighbors.Add(item);
                 }
@@ -58,7 +58,12 @@ namespace GraphImplementation.Classes
             return demNeighbors;
         }
 
-        public int GetSize(Node root)
+        /// <summary>
+        /// 4. returns the total number of nodes in the graph
+        /// </summary>
+        /// <param name="root">root node to start at</param>
+        /// <returns>integer counting nodes</returns>
+        public int Size(Node root)
         {
             return BreadthFirst(root).Count;
         }
@@ -84,7 +89,7 @@ namespace GraphImplementation.Classes
                 }
             }
 
-            order.RemoveAt(order.Count - 1);
+            order = order.Distinct().ToList();
 
             foreach (var item in order)
             {
@@ -94,27 +99,36 @@ namespace GraphImplementation.Classes
             return order;
         }
 
-        //public List<Node> DepthFirst(Node root)
-        //{
-        //    List<Node> order = new List<Node>();
-        //    Stack<Node> depth = new Stack<Node>();
-        //    depth.Push(root);
+        /// <summary>
+        /// traverses a graph with depth first (not required for assignment)
+        /// </summary>
+        /// <param name="root">root node to start at</param>
+        /// <returns>list of nodes from the graph</returns>
+        public List<Node> DepthFirst(Node root)
+        {
+            List<Node> order = new List<Node>();
+            Stack<Node> depth = new Stack<Node>();
+            depth.Push(root);
 
-        //    while (depth.TryPeek(out root))
-        //    {
-        //        Node top = depth.Pop();
-        //        order.Add(top);
+            while (depth.TryPeek(out root))
+            {
+                Node top = depth.Peek();
 
-        //        foreach (Node child in top.Children)
-        //        {
-        //            if (!child.Visited)
-        //            {
-        //                child.Visited = true;
-        //                depth.Push(child);
-        //            }
-        //        }
-        //    }
-        //    return order;
-        //}
+                foreach (Node child in top.Children)
+                {
+                    if (!child.Visited)
+                    {
+                        child.Visited = true;
+                        depth.Push(child);
+                    }
+                    else
+                    {
+                        order.Add(top);
+                        depth.Pop();
+                    }
+                }
+            }
+            return order;
+        }
     }
 }
