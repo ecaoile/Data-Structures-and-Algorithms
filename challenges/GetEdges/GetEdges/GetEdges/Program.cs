@@ -27,6 +27,7 @@ namespace GetEdges
             {
                 Console.Write($"{item.Name} ---> ");
             }
+
             Console.WriteLine("\n");
             List<Node> flightPath1 = new List<Node> { node1, node2, node3, node4 };
 

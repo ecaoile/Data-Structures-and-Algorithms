@@ -112,7 +112,10 @@ namespace GetEdges.Classes
         {
             decimal total = 0;
             if (nodes.Count == 1)
+            {
+                Console.WriteLine("You don't have anywhere else to go!");
                 return total;
+            }
 
             for(int i = 0; i < nodes.Count - 1; i++)
             {
@@ -122,7 +125,6 @@ namespace GetEdges.Classes
                     return 0;
                 }
 
-                //List<decimal> allValues = nodes[i].Children.Keys
                 foreach (KeyValuePair<Node, decimal> pair in nodes[i].Children)
                 {
                     if (pair.Key.Name == nodes[i+1].Name)
