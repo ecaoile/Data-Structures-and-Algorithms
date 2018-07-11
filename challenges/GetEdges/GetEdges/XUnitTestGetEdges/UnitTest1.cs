@@ -46,9 +46,16 @@ namespace XUnitTestGetEdges
             decimal fPath4Cost = fPath4Edges.Value;
 
             Assert.Equal(136, fPath1Cost);
+            Assert.True(isPossible1);
+
             Assert.Equal(0, fPath2Cost);
+            Assert.False(isPossible2);
+
             Assert.Equal(250, fPath3Cost);
+            Assert.True(isPossible3);
+
             Assert.Equal(0, fPath4Cost);
+            Assert.False(isPossible4);
         }
     }
 }

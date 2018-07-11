@@ -37,7 +37,7 @@ namespace GetEdges
 
             List<Node> flightPath2 = new List<Node> { node1, node4 };
 
-            Console.WriteLine(datGraph.GetEdges(flsdightPath2).Value);
+            Console.WriteLine(datGraph.GetEdges(flightPath2).Value);
 
             Console.WriteLine("\nThank you for watching. Press any button to exit.");
             Console.ReadKey();
