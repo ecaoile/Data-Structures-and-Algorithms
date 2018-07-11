@@ -107,7 +107,13 @@ namespace GetEdges.Classes
             return order;
         }
 
-
+        /// <summary>
+        /// determines whether traversal through a list of nodes is possible within a graph
+        /// and returns the weight of all traversals
+        /// </summary>
+        /// <param name="nodes">list of nodes in a graph to traverse</param>
+        /// <returns>a key value pair determining whether the trip is possible
+        /// and how much it costs</returns>
         public KeyValuePair<bool,decimal> GetEdges(List<Node> nodes)
         {
             decimal total = 0;
