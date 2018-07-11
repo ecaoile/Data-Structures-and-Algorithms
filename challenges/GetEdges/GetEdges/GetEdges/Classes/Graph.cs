@@ -108,13 +108,13 @@ namespace GetEdges.Classes
         }
 
 
-        public decimal GetEdges(List<Node> nodes)
+        public KeyValuePair<bool,decimal> GetEdges(List<Node> nodes)
         {
             decimal total = 0;
-            if (nodes.Count == 1)
+            if (nodes.Count <= 1)
             {
                 Console.WriteLine("You don't have anywhere else to go!");
-                return total;
+                return new KeyValuePair<bool, decimal>(false, 0);
             }
 
             for(int i = 0; i < nodes.Count - 1; i++)
@@ -122,7 +122,7 @@ namespace GetEdges.Classes
                 if (!GetNeighbors(nodes[i]).Contains(nodes[i+1]))
                 {
                     Console.WriteLine("Flight does not connect!");
-                    return 0;
+                    return new KeyValuePair<bool, decimal>(false, 0);
                 }
 
                 foreach (KeyValuePair<Node, decimal> pair in nodes[i].Children)
@@ -135,7 +135,7 @@ namespace GetEdges.Classes
                 }
             }
             Console.WriteLine($"Your total is {total}");
-            return total;
+            return new KeyValuePair<bool, decimal>(true, total);
         }
     }
 }

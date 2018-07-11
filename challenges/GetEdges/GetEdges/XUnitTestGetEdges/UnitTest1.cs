@@ -26,22 +26,29 @@ namespace XUnitTestGetEdges
             var path1 = datGraph.BreadthFirst(node1);
 
             List<Node> flightPath1 = new List<Node> { node1, node2, node3, node4 };
-
-            decimal fPath1Edges = datGraph.GetEdges(flightPath1);
+            KeyValuePair<bool, decimal> fPath1Edges = datGraph.GetEdges(flightPath1);
+            bool isPossible1 = fPath1Edges.Key;
+            decimal fPath1Cost = fPath1Edges.Value;
 
             List<Node> flightPath2 = new List<Node> { node1, node4 };
-            decimal fPath2Edges = datGraph.GetEdges(flightPath2);
+            KeyValuePair<bool, decimal> fPath2Edges = datGraph.GetEdges(flightPath2);
+            bool isPossible2 = fPath2Edges.Key;
+            decimal fPath2Cost = fPath2Edges.Value;
 
             List<Node> flightPath3 = new List<Node> { node3, node1 };
-            decimal fPath3Edges = datGraph.GetEdges(flightPath3);
+            KeyValuePair<bool, decimal> fPath3Edges = datGraph.GetEdges(flightPath3);
+            bool isPossible3 = fPath3Edges.Key;
+            decimal fPath3Cost = fPath3Edges.Value;
 
             List<Node> flightPath4 = new List<Node> { node4 };
-            decimal fPath4Edges = datGraph.GetEdges(flightPath4);
+            KeyValuePair<bool, decimal> fPath4Edges = datGraph.GetEdges(flightPath4);
+            bool isPossible4 = fPath4Edges.Key;
+            decimal fPath4Cost = fPath4Edges.Value;
 
-            Assert.Equal(136, fPath1Edges);
-            Assert.Equal(0, fPath2Edges);
-            Assert.Equal(250, fPath3Edges);
-            Assert.Equal(0, fPath4Edges);
+            Assert.Equal(136, fPath1Cost);
+            Assert.Equal(0, fPath2Cost);
+            Assert.Equal(250, fPath3Cost);
+            Assert.Equal(0, fPath4Cost);
         }
     }
 }

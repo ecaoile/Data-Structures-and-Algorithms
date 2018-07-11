@@ -31,13 +31,13 @@ namespace GetEdges
             Console.WriteLine("\n");
             List<Node> flightPath1 = new List<Node> { node1, node2, node3, node4 };
 
-            Console.WriteLine(datGraph.GetEdges(flightPath1)); 
+            Console.WriteLine(datGraph.GetEdges(flightPath1).Value); 
 
             Console.WriteLine("Let's try a path that shouldn't work:");
 
             List<Node> flightPath2 = new List<Node> { node1, node4 };
 
-            Console.WriteLine(datGraph.GetEdges(flightPath2));
+            Console.WriteLine(datGraph.GetEdges(flsdightPath2).Value);
 
             Console.WriteLine("\nThank you for watching. Press any button to exit.");
             Console.ReadKey();
