@@ -1,6 +1,6 @@
 # Whiteboard Challenge 28: Find Islands
-This program takes a 2D array representing a theoretical adjancency list for a graph. 
-
+This program takes a 2D array representing a theoretical adjancency 
+list for a graph and returns the number of islands it contains as an integer. 
 
 
 ## Challenge
@@ -10,4 +10,4 @@ available to your language, return the number of islands present in the graph
 data structure.
 
 ## Solution
-![whiteboard image](../../assets/get_edges.jpg "Whiteboard Challenge 27 Solution")
+![whiteboard image](../../assets/find_islands.jpg "Whiteboard Challenge 28 Solution")
