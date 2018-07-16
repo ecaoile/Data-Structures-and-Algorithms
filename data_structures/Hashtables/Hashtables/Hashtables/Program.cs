@@ -20,6 +20,7 @@ namespace Hashtables
             datHashTable.Find("supercalifragilisticexpialidocious");
 
             Console.WriteLine("\nFinally, let's force some collisions!");
+            datHashTable.Add("act", 222);
             datHashTable.Add("god", 777);
             datHashTable.Add("gas", 666);
             datHashTable.Add("fat", 444);
