@@ -8,13 +8,13 @@ namespace Repeated_Word
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Welcome to Whiteboard Challenge 31!");
+            Console.WriteLine("Welcome to Whiteboard Challenge 31!");
 
-            //string datString1 = "I like bacon, eggs, and bacon again!";
-            //RepeatedWord(datString1);
+            string datString1 = "I like bacon, eggs, and bacon again!";
+            RepeatedWord(datString1);
 
-            //string datString2 = "eggs bacon sausage eggs bacon sausage";
-            //RepeatedWord(datString2);
+            string datString2 = "eggs bacon sausage eggs bacon sausage";
+            RepeatedWord(datString2);
 
             string datString3 = "It was the best of times, it was the worst of times";
             RepeatedWord(datString3);
@@ -23,10 +23,10 @@ namespace Repeated_Word
         }
 
         /// <summary>
-        /// 
+        /// finds the first repeated word in a block of text
         /// </summary>
-        /// <param name="datText"></param>
-        /// <returns></returns>
+        /// <param name="datText">the block of text represented as a string</param>
+        /// <returns>the first repeated word</returns>
         public static string RepeatedWord(string datText)
         {
             string filteredStr = Regex.Replace(datText.ToLower(), @"[^\w\s]", "");
