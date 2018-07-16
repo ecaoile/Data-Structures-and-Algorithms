@@ -18,3 +18,4 @@ Data structures and algorithms folder for Code Fellows C#/.NET 401 course
 14. [Whiteboard Challenge 27: Get Edges](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/GetEdges "Whiteboard Challenge 27: Get Edges")
 15. [Whiteboard Challenge 28: Find Islands](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/find_islands "Whiteboard Challenge 28: Find Islands")
 16. [Challenge: Implement a Hash Table](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/data_structures/Hashtables "Challenge: Implement a Hash Table")
+17. [Whiteboard Challenge 31: Repeated Word](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/repeated_word "Whiteboard Challenge 31: Repeated Word")
