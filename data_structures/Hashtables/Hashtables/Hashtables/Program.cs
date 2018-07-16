@@ -8,15 +8,23 @@ namespace Hashtables
         {
             Console.WriteLine("Welcome to my hash table implementation!");
             Hashtable datHashTable = new Hashtable(1023);
-            Console.WriteLine(datHashTable.ConvertChar("cat"));
+            datHashTable.Add("cat", ConvertChar("cat"));
+            datHashTable.Add("dog", ConvertChar("dog"));
+            datHashTable.Add("supercalifragilisticexpialidocious",
+                ConvertChar("supercalifragilisticexpialidocious"));
+            datHashTable.Add("Mississippi", ConvertChar("Mississippi"));
             Console.WriteLine("Thank you for watching. Press any key to exit.");
             Console.ReadKey();
         }
 
-        //public static int ConvertChar()
-        //{
-        //    int value = 0;
-        //    string word = 
-        //}
+        public static int ConvertChar(string word)
+        {
+            int value = 0;
+            for (int i = 0; i < word.Length; i++)
+            {
+                value += word[i];
+            }
+            return value;
+        }
     }
 }
