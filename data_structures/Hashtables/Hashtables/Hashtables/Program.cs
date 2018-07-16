@@ -7,16 +7,31 @@ namespace Hashtables
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to my hash table implementation!");
-            Hashtable datHashTable = new Hashtable(1023);
-            Console.WriteLine(datHashTable.ConvertChar("cat"));
-            Console.WriteLine("Thank you for watching. Press any key to exit.");
+            Hashtable datHashTable = new Hashtable(1024);
+            datHashTable.Add("cat", 42);
+            datHashTable.Add("dog", 555);
+            datHashTable.Add("supercalifragilisticexpialidocious",
+                1111);
+            datHashTable.Add("Mississippi", 1234);
+
+            Console.WriteLine("\nNow let's try to find values for keys");
+            datHashTable.Find("cat");
+            datHashTable.Find("dog");
+            datHashTable.Find("supercalifragilisticexpialidocious");
+
+            Console.WriteLine("\nFinally, let's force some collisions!");
+            datHashTable.Add("act", 222);
+            datHashTable.Add("god", 777);
+            datHashTable.Add("gas", 666);
+            datHashTable.Add("fat", 444);
+
+            Console.WriteLine("\nLet's see if we can find their values.");
+            datHashTable.Find("god");
+            datHashTable.Find("gas");
+            datHashTable.Find("fat");
+
+            Console.WriteLine("\nThank you for watching. Press any key to exit.");
             Console.ReadKey();
         }
-
-        //public static int ConvertChar()
-        //{
-        //    int value = 0;
-        //    string word = 
-        //}
     }
 }
