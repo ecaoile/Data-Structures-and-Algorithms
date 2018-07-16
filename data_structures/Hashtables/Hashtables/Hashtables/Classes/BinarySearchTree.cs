@@ -102,12 +102,12 @@ namespace Hashtables.Classes
         /// <param name="root">the root node to start at</param>
         /// <param name="value">the value of the node to add</param>
         /// <returns>boolean determining whether the add was successful</returns>
-        public bool Add(Node root, string word, int value)
+        public bool Add(Node root, string key, int value)
         {
-            if (word == root.Pair.Key)
+            if (key == root.Pair.Key)
                 return false;
 
-            Node datNode = new Node(word, value);
+            Node datNode = new Node(key, value);
             Queue<Node> breadth = new Queue<Node>();
             breadth.Enqueue(root);
 
@@ -118,7 +118,7 @@ namespace Hashtables.Classes
 
                 if (value == front.Pair.Value)
                 {
-                   if (word == front.Pair.Key)
+                   if (key == front.Pair.Key)
                     {
                         front.Count++;
                         return true;
@@ -165,45 +165,38 @@ namespace Hashtables.Classes
         }
 
         /// <summary>
-        /// searches for the value of a node in a tree
+        /// searches for the value of a node in a tree (refactored from
+        /// original search)
         /// </summary>
         /// <param name="root">the root node to start at</param>
-        /// <param name="value"></param>
-        /// <returns>the node if it was found</returns>
-        public Node Search(Node root, string word)
+        /// <param name="key">the key in a node's key value pair</param>
+        /// <returns>the value of the Node if it was found</returns>
+        public int Search(Node root, string key)
         {
-            if (root != null)
-            {
-                Node datNode = new Node(word, ConvertChar(word));
-                if (ConvertChar(word) == root.Pair.Value)
-                {
-                    if (root.Pair.Key == word)
-                    {
-                        Console.WriteLine("Found a match!");
-                        return root;
-                    }
+            Queue<Node> breadth = new Queue<Node>();
+            breadth.Enqueue(root);
 
+            while (breadth.TryPeek(out root))
+            {
+                Node front = breadth.Dequeue();
+                if (front.Pair.Key == key)
+                {
+                    Console.WriteLine($"Found a node: [{front.Pair.Key}," +
+                        $" {front.Pair.Value}]");
+                    return front.Pair.Value;
                 }
 
-                if (datNode.Pair.Value < root.Pair.Value)
-                    return Search(root.LeftChild, word);
+                if (front.LeftChild != null)
+                {
+                    breadth.Enqueue(front.LeftChild);
+                }
 
-                if (datNode.Pair.Value > root.Pair.Value)
-                    return Search(root.RightChild, word);
+                if (front.RightChild != null)
+                {
+                    breadth.Enqueue(front.RightChild);
+                }
             }
-
-            Console.WriteLine("Sorry, but we could not find a match!");
-            return null;
-        }
-
-        public int ConvertChar(string word)
-        {
-            int value = 0;
-            for (int i = 0; i < word.Length; i++)
-            {
-                value += word[i];
-            }
-            return value;
+            return 0;
         }
     }
 }

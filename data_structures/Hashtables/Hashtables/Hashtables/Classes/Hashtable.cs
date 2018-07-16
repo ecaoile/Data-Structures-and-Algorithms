@@ -15,6 +15,12 @@ namespace Hashtables.Classes
             HashArray = new BinarySearchTree[hashLength];
         }
 
+        /// <summary>
+        /// converts a string to an integer based on ASCII values
+        /// </summary>
+        /// <param name="word">the string to convert</param>
+        /// <returns>an integer representing 
+        /// the total of ASCII values of a given word</returns>
         public int ConvertChar(string word)
         {
             int value = 0;
@@ -25,11 +31,15 @@ namespace Hashtables.Classes
             return value;
         }
 
+        /// <summary>
+        /// adds a node to a hashtable
+        /// </summary>
+        /// <param name="key">the key of the key value pair in a new node</param>
+        /// <param name="value">the value of the key value pair in a new node</param>
+        /// <returns>the added node</returns>
         public Node Add(string key, int value)
         {
             Node datNode = new Node(key, value);
-            double datDouble = Convert.ToDouble(value) * 599 % HashArray.Length;
-
             int newIndex = GetHash(key);
 
             if (HashArray[newIndex] == null)
@@ -42,14 +52,22 @@ namespace Hashtables.Classes
                 Console.WriteLine("Collision detected!");
                 HashArray[newIndex].Add(HashArray[newIndex].Root, key, value);
             }
-            Console.WriteLine($"{datNode.Pair.Key} with a value of {datNode.Pair.Value} added to index {newIndex}");
+
+            Console.WriteLine($"[{datNode.Pair.Key}, {datNode.Pair.Value}] added to index {newIndex}");
             return datNode;
         }
 
+        /// <summary>
+        /// generates an index within the hashtable 
+        /// based on the ASCII value of a string
+        /// </summary>
+        /// <param name="word">the word to derive a hash value from</param>
+        /// <returns>a hash value that serves as an 
+        /// index within the hash table</returns>
         public int GetHash(string word)
         {
             int value = ConvertChar(word);
-            double datDouble = Convert.ToDouble(value) * 599 / HashArray.Length;
+            double datDouble = Convert.ToDouble(value) * 1223 / HashArray.Length;
             while (datDouble > HashArray.Length)
             {
                 if (datDouble > HashArray.Length)
@@ -61,18 +79,29 @@ namespace Hashtables.Classes
             return newIndex;
         }
 
+        /// <summary>
+        /// finds 
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public int Find(string key)
         {
             int newIndex = GetHash(key);
-            return HashArray[newIndex].Search(HashArray[newIndex].Root, key).Pair.Value;
+            if (HashArray[newIndex] == null)
+                return 0;
+            return HashArray[newIndex].Search(HashArray[newIndex].Root, key);
         }
 
+        /// <summary>
+        /// returns a boolean determining whether the hashtable contains a given key
+        /// </summary>
+        /// <param name="key">the string to search for</param>
+        /// <returns>true if a match is found, else false</returns>
         public bool Contains(string key)
         {
-            int newIndex = GetHash(key);
-            Node datNode = HashArray[newIndex].Search(HashArray[newIndex].Root, key);
+            int datValue = Find(key);
 
-            if (datNode == null)
+            if (datValue == 0)
             {
                 return false;
             }

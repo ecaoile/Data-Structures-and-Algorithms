@@ -7,24 +7,30 @@ namespace Hashtables
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to my hash table implementation!");
-            Hashtable datHashTable = new Hashtable(1023);
-            datHashTable.Add("cat", ConvertChar("cat"));
-            datHashTable.Add("dog", ConvertChar("dog"));
+            Hashtable datHashTable = new Hashtable(1024);
+            datHashTable.Add("cat", 42);
+            datHashTable.Add("dog", 555);
             datHashTable.Add("supercalifragilisticexpialidocious",
-                ConvertChar("supercalifragilisticexpialidocious"));
-            datHashTable.Add("Mississippi", ConvertChar("Mississippi"));
-            Console.WriteLine("Thank you for watching. Press any key to exit.");
-            Console.ReadKey();
-        }
+                1111);
+            datHashTable.Add("Mississippi", 1234);
 
-        public static int ConvertChar(string word)
-        {
-            int value = 0;
-            for (int i = 0; i < word.Length; i++)
-            {
-                value += word[i];
-            }
-            return value;
+            Console.WriteLine("\nNow let's try to find values for keys");
+            datHashTable.Find("cat");
+            datHashTable.Find("dog");
+            datHashTable.Find("supercalifragilisticexpialidocious");
+
+            Console.WriteLine("\nFinally, let's force some collisions!");
+            datHashTable.Add("god", 777);
+            datHashTable.Add("gas", 666);
+            datHashTable.Add("fat", 444);
+
+            Console.WriteLine("\nLet's see if we can find their values.");
+            datHashTable.Find("god");
+            datHashTable.Find("gas");
+            datHashTable.Find("fat");
+
+            Console.WriteLine("\nThank you for watching. Press any key to exit.");
+            Console.ReadKey();
         }
     }
 }
