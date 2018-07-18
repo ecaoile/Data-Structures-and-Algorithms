@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree_Intersection", "Tree_Intersection\Tree_Intersection.csproj", "{42CC7A54-6269-4CC4-8CAE-7D32D536EFCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tree_Intersection", "Tree_Intersection\Tree_Intersection.csproj", "{42CC7A54-6269-4CC4-8CAE-7D32D536EFCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestTreeInterSection", "XUnitTestTreeInterSection\XUnitTestTreeInterSection.csproj", "{2A8EA1EB-E008-4D94-A6F9-3357310FDFF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{42CC7A54-6269-4CC4-8CAE-7D32D536EFCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42CC7A54-6269-4CC4-8CAE-7D32D536EFCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42CC7A54-6269-4CC4-8CAE-7D32D536EFCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A8EA1EB-E008-4D94-A6F9-3357310FDFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8EA1EB-E008-4D94-A6F9-3357310FDFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8EA1EB-E008-4D94-A6F9-3357310FDFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8EA1EB-E008-4D94-A6F9-3357310FDFF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

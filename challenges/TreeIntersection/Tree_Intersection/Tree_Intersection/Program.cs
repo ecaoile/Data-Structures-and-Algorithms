@@ -70,9 +70,13 @@ namespace Tree_Intersection
             Console.WriteLine("\nHere's your list of common numbers:");
             Print(treeIntersection);
 
-            return demNums1;
+            return treeIntersection;
         }
 
+        /// <summary>
+        /// helper method to print out a list of integers to the console
+        /// </summary>
+        /// <param name="datIntList">the list of integers to print out</param>
         public static void Print(List<int> datIntList)
         {
             Console.Write("[ ");

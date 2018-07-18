@@ -74,6 +74,7 @@ namespace Tree_Intersection.Classes
         /// custom breadth first traversal that returns a list of int values
         /// </summary>
         /// <param name="node">the root node to start at</param>
+        /// <returns>a list of of integers</returns>
         public List<int> BreadthFirstList(Node root)
         {
             Queue<Node> breadth = new Queue<Node>();
