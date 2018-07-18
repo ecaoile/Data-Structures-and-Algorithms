@@ -105,22 +105,21 @@ namespace Tree_Intersection.Classes
         /// <param name="root">the root node to start at</param>
         /// <param name="value">the value of the node to add</param>
         /// <returns>boolean determining whether the add was successful</returns>
-        public bool Add(Node root, int value)
+        public Node Add(Node root, int value)
         {
             if (value == root.Value)
-                return false;
+                return null;
 
             Node datNode = new Node(value);
             Queue<Node> breadth = new Queue<Node>();
             breadth.Enqueue(root);
-
             while (breadth.TryPeek(out root))
             {
                 Node front = breadth.Dequeue();
-                //Console.WriteLine(front.Value);
+                //Console.Write($"{front.Value} ");
 
                 if (value == front.Value)
-                    return false;
+                    return front;
 
                 if (value < front.Value)
                 {
@@ -128,7 +127,7 @@ namespace Tree_Intersection.Classes
                     {
                         front.LeftChild = datNode;
                         //Console.WriteLine($"Added {value} to the left of {front.Value}.");
-                        return true;
+                        return front;
                     }
                     else
                     {
@@ -142,7 +141,7 @@ namespace Tree_Intersection.Classes
                     {
                         front.RightChild = datNode;
                         //Console.WriteLine($"Added {value} to the right of {front.Value}");
-                        return true;
+                        return front;
                     }
                     else
                     {
@@ -150,7 +149,7 @@ namespace Tree_Intersection.Classes
                     }
                 }
             }
-            return false;
+            return null;
         }
 
         /// <summary>
@@ -166,7 +165,7 @@ namespace Tree_Intersection.Classes
                 Node datNode = new Node(value);
                 if (value == root.Value)
                 {
-                    Console.WriteLine($"Found a match with the value {root.Value}!");
+                    //Console.WriteLine($"Found a match with the value {root.Value}!");
                     return root;
                 }
 
@@ -177,7 +176,7 @@ namespace Tree_Intersection.Classes
                     return Search(root.RightChild, value);
             }
 
-            Console.WriteLine("Sorry, but we could not find a match!");
+            //Console.WriteLine("Sorry, but we could not find a match!");
             return null;
         }
     }

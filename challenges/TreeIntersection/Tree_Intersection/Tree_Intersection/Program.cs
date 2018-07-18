@@ -22,6 +22,10 @@ namespace Tree_Intersection
             datBST1.Add(datBST1Root, 300);
             datBST1.Add(datBST1Root, 500);
 
+            List<int> datNumList1 = datBST1.BreadthFirstList(datBST1Root);
+            Console.WriteLine("\nHere are your numbers from the first list:");
+            Print(datNumList1);
+
             Node datBST2Root = new Node(42);
             BinarySearchTree datBST2 = new BinarySearchTree(datBST2Root);
             datBST2.Add(datBST2Root, 100);
@@ -35,6 +39,10 @@ namespace Tree_Intersection
             datBST2.Add(datBST2Root, 300);
             datBST2.Add(datBST2Root, 350);
             datBST2.Add(datBST2Root, 500);
+
+            List<int> datNumList2 = datBST2.BreadthFirstList(datBST2Root);
+            Console.WriteLine("\nHere are your numbers from the second list:");
+            Print(datNumList2);
 
             TreeIntersection(datBST1, datBST2);
             Console.WriteLine("\nThank you for watching! Press any key to exit.");
@@ -59,15 +67,20 @@ namespace Tree_Intersection
                     treeIntersection.Add(result.Value);
             }
 
-            Console.WriteLine("Here's your list of common numbers:");
+            Console.WriteLine("\nHere's your list of common numbers:");
+            Print(treeIntersection);
+
+            return demNums1;
+        }
+
+        public static void Print(List<int> datIntList)
+        {
             Console.Write("[ ");
-            foreach (int num in treeIntersection)
+            foreach (int num in datIntList)
             {
                 Console.Write($"{num} ");
             }
-            Console.Write("]");
-
-            return demNums1;
+            Console.Write("]\n");
         }
     }
 }
