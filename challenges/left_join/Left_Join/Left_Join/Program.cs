@@ -8,7 +8,7 @@ namespace Left_Join
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Whiteboard Challenge 34!");
+            Console.WriteLine("Welcome to Whiteboard Challenge 33!");
 
             HashMap datHM1 = new HashMap(1024);
             datHM1.Add("fond", "enamored");
