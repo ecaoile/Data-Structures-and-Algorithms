@@ -41,6 +41,7 @@ namespace Left_Join
         /// <returns>the resulting table as a list of string lists after performing a left join</returns>
         public static List<List<string>> LeftJoin(HashMap datHM1, HashMap datHM2)
         {
+            // making an assumption that we're allowed to know the keys of a hashmap
             List<string> hMap1Keys = new List<string> { "fond", "wrath", "diligent", "outfit", "guide" };
             List<string> hMap2Keys = new List<string> { "fond", "wrath", "diligent", "guide", "flow" };
             List<string> hMap2Values = new List<string>();
@@ -57,11 +58,16 @@ namespace Left_Join
             
             foreach (var key in hMap1Keys)
             {
+                // emulating the .contains method because 
+                // Collin got jealous that I was using it
                 bool isHMap1Key = false;
                 foreach (var hMap2Key in hMap2Keys)
                 {
                     if (hMap2Key == key)
+                    {
                         isHMap1Key = true;
+                        break;
+                    }
                 }
 
                 if (isHMap1Key == false)
@@ -89,6 +95,11 @@ namespace Left_Join
             Console.Write("[ ");
             foreach (string word in datIntList)
             {
+                if (word == null)
+                {
+                    Console.Write($"NULL");
+                }
+
                 Console.Write($"{word} ");
             }
             Console.Write("]\n");
