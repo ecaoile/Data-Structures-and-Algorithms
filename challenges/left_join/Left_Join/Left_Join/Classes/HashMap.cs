@@ -6,8 +6,6 @@ namespace Left_Join.Classes
 {
     public class HashMap
     {
-        //public int HashLength { get; set; }
-
         public LinkList[] HashArray { get; set; }
 
         public HashMap(int hashLength)
@@ -58,6 +56,11 @@ namespace Left_Join.Classes
             return datNode;
         }
 
+        /// <summary>
+        /// custom add that points to a method that adds a value to an existing key
+        /// </summary>
+        /// <param name="key">key in key value pair</param>
+        /// <param name="value">value in key value pair</param>
         public void AddJoin(string key, string value)
         {
             Node datNode = new Node(key, value);
@@ -65,7 +68,6 @@ namespace Left_Join.Classes
 
             if (HashArray[newIndex] != null)
             {
-                //Console.WriteLine("going into addvaluetokey");
                 HashArray[newIndex].AddValueToKey(datNode);
             }
 
