@@ -139,6 +139,10 @@ namespace Left_Join
             return;  
         }
 
+        /// <summary>
+        /// custom method that adds values to an existing key
+        /// </summary>
+        /// <param name="newNode"></param>
         public void AddValueToKey(Node newNode)
         {
             Current = Head;
