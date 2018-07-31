@@ -7,7 +7,7 @@ namespace XUnitMergeSort
     {
         [Theory]
         [InlineData((new int[] { 3, 5, 1, 8, 7 }), (new int[] { 1, 3, 5, 7, 8 }))]
-        [InlineData((new int[] { 4, 5, 0, -1, 3 }), (new int[] { -1, 0, 3, 4, 5 }))]
+        [InlineData((new int[] { 4, 11, 5, 0, -1, 3 }), (new int[] { -1, 0, 3, 4, 5, 11 }))]
         [InlineData((new int[] { 1, -1, 0 }), (new int[] { -1, 0, 1}))]
         public void CanArrangeUnsortedArray(int[] input, int[] output)
         {
