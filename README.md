@@ -22,4 +22,4 @@ Data structures and algorithms folder for Code Fellows C#/.NET 401 course
 18. [Whiteboard Challenge 32: Tree Intersection](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/TreeIntersection "Whiteboard Challenge 32: Tree Intersection")
 19. [Whiteboard Challenge 33: Implement a simplified LEFT JOIN for 2 Hashmaps](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/left_join "Whiteboard Challenge 33: Implement a simplified LEFT JOIN for 2 Hashmaps.")
 20. [Implementation: Insertion Sort](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/data_structures/Sorting_Algorithms "Implementation: Insertion Sort")
-21. [Challenge: Merge Sort](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/MergeSort "Implement Mege Sort")
+21. [Whiteboard Challenge 41: Merge Sort](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/challenges/MergeSort "Implement Mege Sort")
