@@ -1,6 +1,6 @@
 # Implement Quick Sort
 This program takes an array of integers and returns a sorted array using a
- merge sort algorithm.
+ quick sort algorithm.
 ```
 Example:	        input <-- [3, 2, 4, 1]
 			output <-- [1, 2, 3, 4]
