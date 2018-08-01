@@ -12,4 +12,4 @@ Write a function that accepts an array of unsorted integers,
 algorithm.
 
 ## Solution
-![whiteboard image](merge_sort.JPG "Whiteboard Challenge 41 Solution")
+![whiteboard image](merge_sort.jpg "Whiteboard Challenge 41 Solution")
