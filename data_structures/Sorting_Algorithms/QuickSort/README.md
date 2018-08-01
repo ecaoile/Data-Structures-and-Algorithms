@@ -11,4 +11,4 @@ Write a function that accepts an array of integers,
  and returns an array sorted by a recursive quicksort algorithm.
 
 ## Solution
-![whiteboard image](quick_sort.JPG "Whiteboard Challenge 42 Solution")
+![whiteboard image](quick_sort.jpg "Whiteboard Challenge 42 Solution")
