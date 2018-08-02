@@ -24,3 +24,4 @@ Data structures and algorithms folder for Code Fellows C#/.NET 401 course
 20. [Implementation: Insertion Sort](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/data_structures/Sorting_Algorithms "Implementation: Insertion Sort")
 21. [Whiteboard Challenge 41: Merge Sort](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/data_structures/Sorting_Algorithms/MergeSort "Implement Merge Sort")
 22. [Whiteboard Challenge 42: Quick Sort](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/data_structures/Sorting_Algorithms/QuickSort "Implement Quick Sort")
+23. [Whiteboard Challenge 43: Radix Sort](https://github.com/ecaoile/Data-Structures-and-Algorithms/tree/master/data_structures/Sorting_Algorithms/RadixSort "Implement Radix Sort")
