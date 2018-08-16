@@ -84,6 +84,9 @@ namespace GraphImplementation
             Console.WriteLine("\nLet's get the number of nodes in our graph:");
             Console.WriteLine(datGraph.Size(nodeA));
 
+            Console.WriteLine("\nLet's try depth first:");
+            datGraph.DepthFirst(nodeA);
+
             Console.WriteLine("\nThank you for watching! Press any key to exit.");
             Console.ReadKey();
         }
