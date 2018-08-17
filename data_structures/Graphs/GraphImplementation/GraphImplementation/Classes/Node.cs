@@ -8,14 +8,14 @@ namespace GraphImplementation.Classes
     {
         public string Value { get; set; }
 
-        public List<Node> Children { get; set; }
+        public List<Node> Neighbors { get; set; }
 
         public bool Visited { get; set; }
 
         public Node(string value)
         {
             Value = value;
-            Children = new List<Node>();
+            Neighbors = new List<Node>();
             Visited = false;
         }
     }

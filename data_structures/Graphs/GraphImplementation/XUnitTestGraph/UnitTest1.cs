@@ -138,15 +138,15 @@ namespace XUnitTestGraph
             datGraph.AddEdge(nodeA, nodeC);
             datGraph.AddEdge(nodeC, nodeD);
 
-            bool nodeAHasChildC = nodeA.Children.Contains(nodeC);
-            bool nodeCHasChildD = nodeC.Children.Contains(nodeD);
+            bool nodeAHasChildC = nodeA.Neighbors.Contains(nodeC);
+            bool nodeCHasChildD = nodeC.Neighbors.Contains(nodeD);
 
             // B -> C -> F
             datGraph.AddEdge(nodeB, nodeC);
             datGraph.AddEdge(nodeC, nodeF);
 
-            bool nodeBHasChildC = nodeB.Children.Contains(nodeC);
-            bool nodeCHasChildF = nodeC.Children.Contains(nodeF);
+            bool nodeBHasChildC = nodeB.Neighbors.Contains(nodeC);
+            bool nodeCHasChildF = nodeC.Neighbors.Contains(nodeF);
 
             Assert.True(nodeAHasChildC);
             Assert.True(nodeCHasChildD);

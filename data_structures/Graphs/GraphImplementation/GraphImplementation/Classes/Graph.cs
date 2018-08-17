@@ -7,9 +7,11 @@ namespace GraphImplementation.Classes
 {
     public class Graph
     {
+        public List<Node> Vertices { get; set; }
+
         public Graph()
         {
-
+            Vertices = new List<Node>();
         }
 
         /// <summary>
@@ -20,7 +22,17 @@ namespace GraphImplementation.Classes
         /// <returns>the added child</returns>
         public Node AddEdge(Node parent, Node child)
         {
-            parent.Children.Add(child);
+            if (!Vertices.Contains(child))
+            {
+                Vertices.Add(child);
+            }
+
+            if (!parent.Neighbors.Contains(child))
+            {
+                parent.Neighbors.Add(child);
+                child.Neighbors.Add(parent);
+            }
+
             return child;
         }
 
@@ -41,21 +53,7 @@ namespace GraphImplementation.Classes
         /// <returns>list of neighbor nodes to root</returns>
         public List<Node> GetNeighbors(Node root)
         {
-            var allNodes = GetNodes(root);
-
-            // initializing list with root's children
-            List<Node> demNeighbors = new List<Node>(root.Children);
-
-            // adding the "parents"
-            foreach (var item in allNodes)
-            {
-                if (item.Children.Contains(root) && !demNeighbors.Contains(item))
-                {
-                    demNeighbors.Add(item);
-                }
-            }
-
-            return demNeighbors;
+            return root.Neighbors;
         }
 
         /// <summary>
@@ -68,6 +66,11 @@ namespace GraphImplementation.Classes
             return BreadthFirst(root).Count;
         }
 
+        /// <summary>
+        /// traverses a graph using breadth first method
+        /// </summary>
+        /// <param name="root">the root node to start traversal</param>
+        /// <returns>a list of nodes found from traversal</returns>
         public List<Node> BreadthFirst(Node root)
         {
             List<Node> order = new List<Node>();
@@ -81,7 +84,7 @@ namespace GraphImplementation.Classes
                 Node front = breadth.Dequeue();
                 order.Add(front);
 
-                foreach (Node child in front.Children)
+                foreach (Node child in front.Neighbors)
                 {
                     if (!child.Visited)
                     {
@@ -105,57 +108,36 @@ namespace GraphImplementation.Classes
         /// </summary>
         /// <param name="root">root node to start at</param>
         /// <returns>list of nodes from the graph</returns>
-        //public List<Node> DepthFirst(Node root)
-        //{
-        //    List<Node> order = new List<Node>();
-        //    Stack<Node> depth = new Stack<Node>();
-        //    depth.Push(root);
+        public List<Node> DepthFirst(Node root)
+        {
+            List<Node> visited = new List<Node>();
+            return DFSUtil(root, visited);
+        }
 
-        //    //while (depth.TryPeek(out root))
-        //    //{
-        //    //    Node top = depth.Peek();
+        /// <summary>
+        /// helper method for DFS so that the user is not required to put in a starting value for visited nodes
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="visited"></param>
+        /// <returns></returns>
+        public List<Node> DFSUtil(Node root, List<Node> visited)
+        {
+            root.Visited = true;
+            Console.WriteLine(root.Value);
+            foreach (Node node in root.Neighbors)
+            {
+                if (node.Visited == false)
+                {
+                    DFSUtil(node, visited);
+                }
+            }
 
-        //    //    foreach (Node child in top.Children)
-        //    //    {
-        //    //        if (!child.Visited)
-        //    //        {
-        //    //            child.Visited = true;
-        //    //            depth.Push(child);
-        //    //        }
-        //    //        else
-        //    //        {
-        //    //            order.Add(top);
-        //    //            depth.Pop();
-        //    //        }
-        //    //    }
+            foreach (Node node in visited)
+            {
+                node.Visited = false;
+            }
 
-        //    //}
-
-        //    List<Node> visited = new List<Node>();
-
-        //    while (depth.Count != 0)
-        //    {
-        //        var current = depth.Pop();
-        //        order.Add(current);
-        //        visited.Add(current);
-
-        //        var neighbors = GetNeighbors(current).Where(node => !visited.Contains(node));
-
-        //        foreach (var item in neighbors.Reverse())
-        //        {
-        //            depth.Push(item);
-        //            order.Add(item);
-        //        }
-        //    }
-
-        //    order = order.Distinct().ToList();
-
-        //    foreach (var item in order)
-        //    {
-        //        item.Visited = false;
-        //    }
-
-        //    return order;
-        //}
+            return visited;
+        }
     }
 }
