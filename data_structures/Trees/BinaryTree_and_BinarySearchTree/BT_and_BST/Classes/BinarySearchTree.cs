@@ -151,6 +151,64 @@ namespace BT_and_BST.Classes
         }
 
         /// <summary>
+        /// deletes a node from the tree and re-organizes the tree as needed to meet BST requirements
+        /// </summary>
+        /// <param name="root">root of the BST</param>
+        /// <param name="key">value of the node to delete</param>
+        /// <returns>deleted node</returns>
+        public Node Delete(Node root, double key)
+        {
+            if (root == null) return null;
+
+            // delete from the right subtree
+            if (key > Root.Value) root.RightChild = Delete(root.RightChild, key);
+
+            // delete from the left subtree
+            else if (key < root.Value) root.LeftChild = Delete(root.LeftChild, key);
+
+            else
+            {
+                // the node is a leaf
+                if (root.LeftChild == null && root.RightChild == null) root = null;
+                else if (root.RightChild != null)
+                {
+                    root.Value = Successor(root);
+                    root.RightChild = Delete(Root.RightChild, root.Value);
+                }
+                else
+                {
+                    root.Value = Predecessor(root);
+                    root.LeftChild = Delete(root.LeftChild, root.Value);
+                }
+            }
+            return root;
+        }
+
+        /// <summary>
+        /// helper method to hold the left child value
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public double Predecessor(Node root)
+        {
+            root = root.LeftChild;
+            while (root.RightChild != null) root = root.RightChild;
+            return root.Value;
+        }
+
+        /// <summary>
+        /// helper method to hold the right child value
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public double Successor(Node root)
+        {
+            root = root.RightChild;
+            while (root.LeftChild != null) root = root.LeftChild;
+            return root.Value;
+        }
+
+        /// <summary>
         /// searches for the value of a node in a tree
         /// </summary>
         /// <param name="root">the root node to start at</param>
